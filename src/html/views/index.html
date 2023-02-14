@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title><%= htmlWebpackPlugin.options.title %></title>
+  </head>
+  <body>
+    <%= _.template(require('../includes/header.html').default)() %>
+    <header>
+      <h1>Рассчитайте стоимость автомобиля в лизинг</h1>
+    </header>
+    <main>
+        Content main
+    </main>
+  </body>
+</html>
