@@ -1,0 +1,17 @@
+{
+  "emmet.triggerExpansionOnTab": true,
+  "eslint.workingDirectories": ["./"],
+  "eslint.validate": [
+    "vue",
+    "javascript"
+  ],
+  "editor.formatOnSaveMode": "file",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "typescript.suggest.paths": false,
+  "path-intellisense.mappings": {
+    "~": "${workspaceRoot}",
+    "@": "${workspaceRoot}/src"
+  },
+}
