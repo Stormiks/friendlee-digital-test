@@ -1,0 +1,51 @@
+{
+  "index.css": {
+    "file": "assets/index-1aec965c.css",
+    "src": "index.css"
+  },
+  "index.html": {
+    "assets": [
+      "assets/Nekst-Black-d2daef94.eot",
+      "assets/Nekst-Black-c9058361.woff",
+      "assets/Nekst-Black-22c8ab47.ttf",
+      "assets/Gilroy-Regular-0f661f54.eot",
+      "assets/Gilroy-Regular-8e78c2c8.woff2",
+      "assets/Gilroy-Regular-65aaefc7.woff",
+      "assets/Gilroy-Regular-4312cfe3.ttf"
+    ],
+    "css": [
+      "assets/index-1aec965c.css"
+    ],
+    "file": "assets/index-337f3d7a.js",
+    "isEntry": true,
+    "src": "index.html"
+  },
+  "src/assets/fonts/Gilroy/Gilroy-Regular/Gilroy-Regular.eot": {
+    "file": "assets/Gilroy-Regular-0f661f54.eot",
+    "src": "src/assets/fonts/Gilroy/Gilroy-Regular/Gilroy-Regular.eot"
+  },
+  "src/assets/fonts/Gilroy/Gilroy-Regular/Gilroy-Regular.ttf": {
+    "file": "assets/Gilroy-Regular-4312cfe3.ttf",
+    "src": "src/assets/fonts/Gilroy/Gilroy-Regular/Gilroy-Regular.ttf"
+  },
+  "src/assets/fonts/Gilroy/Gilroy-Regular/Gilroy-Regular.woff": {
+    "file": "assets/Gilroy-Regular-65aaefc7.woff",
+    "src": "src/assets/fonts/Gilroy/Gilroy-Regular/Gilroy-Regular.woff"
+  },
+  "src/assets/fonts/Gilroy/Gilroy-Regular/Gilroy-Regular.woff2": {
+    "file": "assets/Gilroy-Regular-8e78c2c8.woff2",
+    "src": "src/assets/fonts/Gilroy/Gilroy-Regular/Gilroy-Regular.woff2"
+  },
+  "src/assets/fonts/Nekst/Nekst-Black/Nekst-Black.eot": {
+    "file": "assets/Nekst-Black-d2daef94.eot",
+    "src": "src/assets/fonts/Nekst/Nekst-Black/Nekst-Black.eot"
+  },
+  "src/assets/fonts/Nekst/Nekst-Black/Nekst-Black.ttf": {
+    "file": "assets/Nekst-Black-22c8ab47.ttf",
+    "src": "src/assets/fonts/Nekst/Nekst-Black/Nekst-Black.ttf"
+  },
+  "src/assets/fonts/Nekst/Nekst-Black/Nekst-Black.woff": {
+    "file": "assets/Nekst-Black-c9058361.woff",
+    "src": "src/assets/fonts/Nekst/Nekst-Black/Nekst-Black.woff"
+  }
+}
