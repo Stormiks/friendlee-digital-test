@@ -1,5 +1,11 @@
 <template>
-  <div class="input-wrapper" :class="{ disabled: disabled }">
+  <div
+    class="input-wrapper"
+    :class="{
+      'input-wrapper--sum': !controls,
+      disabled: disabled
+    }"
+  >
     <label :for="id" class="input__label">
       <slot name="label" />
     </label>
