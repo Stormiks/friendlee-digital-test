@@ -1,6 +1,6 @@
 {
   "index.css": {
-    "file": "assets/index-c327cd11.css",
+    "file": "assets/index-1aec965c.css",
     "src": "index.css"
   },
   "index.html": {
@@ -14,9 +14,9 @@
       "assets/Gilroy-Regular-4312cfe3.ttf"
     ],
     "css": [
-      "assets/index-c327cd11.css"
+      "assets/index-1aec965c.css"
     ],
-    "file": "assets/index-c7b472cb.js",
+    "file": "assets/index-94586f58.js",
     "isEntry": true,
     "src": "index.html"
   },
