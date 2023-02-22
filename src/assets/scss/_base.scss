@@ -1,9 +1,145 @@
-@import '../css/normalize.css';
+:root {
+  --indicator-size: 16px;
+  --indicator-border-width: 2px;
+}
 
-$color-base-black: #111;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100vh;
+}
+
+body {
+  font-size: 16px;
+  padding: 0 32px;
+  margin: 0;
+
+  @media (min-width: 320px) {
+    padding: 0 20px;
+  }
+}
 
 h1 {
-  color: $color-base-black;
-  font-family: 'Nekst Black';
+  font-family: 'Nekst';
   font-size: 54px;
+  line-height: 90%;
+}
+
+label {
+  font-family: 'Gilroy';
+  line-height: 20%;
+}
+
+input {
+  font-family: 'Nekst';
+  font-size: 30px;
+  line-height: 120%;
+  border: none;
+  background-color: transparent;
+}
+
+button {
+  font-family: 'Nekst';
+  font-size: 30px;
+  line-height: 108%;
+  cursor: pointer;
+  border: none;
+  background: none;
+  padding: 0;
+}
+
+span[class^=symbol] {
+  position: relative;
+  top: -6px;
+}
+
+form {
+  $input-wrapper-margin: 32px;
+
+  display: flex;
+
+  .btn {
+    color: $color-white-base;
+    background-color: $button-not-focus-bg-color;
+    text-align: center;
+    padding: 14px;
+    border-radius: $button-radius;
+    width: 100%;
+    transition: background .15s ease;
+
+    &[disabled] {
+      opacity: 0.4;
+      pointer-events: none;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $button-hover-bg-color;
+    }
+
+    &:active {
+      color: $button-active-text-color;
+      background-color: $button-active-bg-color;
+    }
+  }
+
+  @media (min-width: 320px) {
+    flex-wrap: wrap;
+
+    .input-wrapper:not(:last-child) {
+      width: 100%;
+      margin-bottom: 16px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .input-wrapper {
+      &.input-wrapper--sum {
+        width: calc(50% - ($input-wrapper-margin / 1.5));
+      }
+
+      &:last-child {
+        margin-right: auto;
+      }
+    }
+  }
+
+  @media (min-width: 992px) {
+    .input-wrapper {
+      + &:not(:last-child) {
+        margin-bottom: $input-wrapper-margin;
+      }
+    }
+  }
+
+  @media (min-width: 1200px) {
+    align-items: center;
+
+    .input-wrapper,
+    .input-wrapper:last-child {
+      width: calc(33.33333333% - ($input-wrapper-margin / 1.5)) !important;
+
+      + &:not(:last-child) {
+        margin-bottom: $input-wrapper-margin;
+      }
+
+      + &:not(:first-child):not(:nth-of-type(4n)) {
+        margin-left: $input-wrapper-margin;
+      }
+    }
+  }
+}
+
+header {
+  @media (min-width: 320px) {
+    h1 {
+      font-size: 34px;
+      margin-block-end: 34px;
+      margin-block-start: 34px;
+    }
+  }
 }

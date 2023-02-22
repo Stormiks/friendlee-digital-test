@@ -1,0 +1,54 @@
+.loading-indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &.inline {
+    display: inline-flex;
+  }
+
+  > .animation {
+    animation: rotating .7s linear infinite;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: transparent 2px solid;
+    border-color: rgba($loading-indicator-color, 1);
+    border-width: var(--indicator-border-width);
+    border-right-color: transparent;
+    width: var(--indicator-size);
+    height: var(--indicator-size);
+  }
+
+  &.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+
+    > .animation {
+      margin-bottom: 32px;
+    }
+
+    &:not(.transparent) {
+      background: rgba($color-white-base, .95);
+    }
+
+    &.fixed {
+      position: fixed;
+    }
+  }
+}
+
+@keyframes rotating {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

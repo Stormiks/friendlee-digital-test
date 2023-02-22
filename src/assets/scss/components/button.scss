@@ -1,0 +1,22 @@
+.btn {
+  position: relative;
+
+  &.primary {
+    color: $color-white-base;
+    background-color: $color-orange-light;
+  }
+
+  &.loading {
+    pointer-events: none;
+  }
+
+  > .loading-indicator {
+    background-color: $button-indicator-color;
+    border-radius: $button-radius;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+}

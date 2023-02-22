@@ -1,0 +1,23 @@
+$color-white-base: #fff;
+$color-black-base: #111;
+$color-black-dark: #333;
+$color-gray-light: #f3f3f4;
+$color-gray-light-2: #e0e0e0;
+$color-gray-dark: #575757;
+$color-orange-light: #ff9514;
+
+$input-not-focus-bg-color: $color-gray-light;
+$input-active-bg-color: $color-white-base;
+$input-text-color: $color-gray-dark;
+$input-range-back-track-color: #E1E1E1;
+$input-range-slider-thumb-bg: $color-orange-light;
+$input-range-runnable-track-bg: $color-orange-light;
+
+$button-active-text-color: $color-white-base;
+$button-not-focus-bg-color: $color-orange-light;
+$button-hover-bg-color: $color-black-base;
+$button-active-bg-color: $color-gray-dark;
+$button-radius: 16px;
+$button-indicator-color: $button-not-focus-bg-color;
+
+$loading-indicator-color: $color-white-base;

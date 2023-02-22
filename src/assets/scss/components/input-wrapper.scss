@@ -1,0 +1,147 @@
+.input-wrapper {
+  &.disabled {
+    *,
+    input[disabled] {
+      pointer-events: none;
+      opacity: .4;
+    }
+  }
+}
+
+.input__label-aux {
+  color: $color-gray-dark;
+  display: block;
+  font-family: 'Nekst';
+  font-size: 30px;
+  line-height: 108%;
+  text-align: center;
+  border-radius: 16px;
+  padding: 15px 17px;
+  z-index: 2;
+  user-select: none;
+}
+
+.label-aux {
+  &--accent {
+    background-color: rgba($color-gray-light-2, 40%);
+    font-size: 20px;
+    line-height: 162%;
+  }
+}
+
+.input {
+  &__label {
+    display: block;
+    line-height: 120%;
+
+    &:not(for) {
+      color: $color-black-dark;
+
+      + .input-container {
+        color: $color-black-dark;
+        font-family: 'Nekst';
+        font-size: 54px;
+        line-height: 90%;
+      }
+    }
+
+    @media (min-width: 320px) {
+      margin-bottom: 8px;
+    }
+
+    @media (min-width: 992px) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &-container {
+    display: flex;
+    align-items: center;
+
+    &--inputs {
+      $input-number-padding-horizontal: 24px;
+
+      color: $input-text-color  ;
+      border-color: $input-not-focus-bg-color;
+      border-width: 2px;
+      border-radius: 16px;
+      border-style: solid;
+      background-color: $input-not-focus-bg-color;
+      padding: 7px;
+      position: relative;
+      justify-content: flex-end;
+
+      input[type=number] {
+        color: $input-text-color;
+        background-color: transparent;
+        border: none;
+        flex-grow: 1;
+        padding: 16px $input-number-padding-horizontal;
+        border-radius: 16px;
+        transition: background .1s ease-in, box-shadow .15s ease;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+
+        &:focus {
+          outline: none;
+          background-color: $input-active-bg-color;
+          box-shadow: 0 4px 4px 0 rgba($color-black-base, 25%);
+        }
+      }
+
+      .runnable-track-custom {
+        background-color: $input-range-runnable-track-bg;
+        width: 100%;
+        height: 2px;
+      }
+
+      input[type=range],
+      .slider-runnable-track-container {
+        position: absolute;
+        height: 2px;
+        bottom: -2px;
+        left: 0;
+        right: 0;
+        width: calc(100% - ($input-number-padding-horizontal * 2));
+        margin: auto;
+        -webkit-appearance: none;
+        background: transparent;
+
+        &::-webkit-slider-thumb {
+          $slider-thumb-size: 20px;
+
+          -webkit-appearance: none;
+          border: none;
+          height: $slider-thumb-size;
+          width: $slider-thumb-size;
+          border-radius: 50%;
+          background: $input-range-slider-thumb-bg;
+          cursor: pointer;
+          margin-top: -9px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+        }
+
+        &::-webkit-slider-runnable-track {
+          width: 100%;
+          height: 2px;
+          cursor: pointer;
+          background-color: $input-range-back-track-color;
+          border-radius: 0;
+          border: none;
+        }
+
+        &:focus::-webkit-slider-runnable-track {
+          background-color: $input-range-back-track-color;
+        }
+      }
+    }
+  }
+}
