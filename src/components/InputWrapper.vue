@@ -120,9 +120,9 @@ export default {
       let runnableTrackWidth = ((this.rangeValue - this.rangeMin) / (this.rangeMax - this.rangeMin) * 100).toFixed(2);
 
       if (this.rangeValue < this.rangeMin) {
-        runnableTrackWidth = '0%';
+        runnableTrackWidth = 0;
       } else if (this.rangeValue > this.rangeMax) {
-        runnableTrackWidth = '100%';
+        runnableTrackWidth = 100;
       }
 
       this.runnableTrackStyles = `${runnableTrackWidth}%`;
