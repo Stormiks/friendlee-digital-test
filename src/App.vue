@@ -121,7 +121,12 @@ export default {
   },
   computed: {
     calculatedPercentage() {
-      return Math.round(this.formData.deposit / this.formData.autoAmount * 100);
+      const totalPercent = Math.round(this.formData.deposit / this.formData.autoAmount * 100);
+      if (totalPercent < 10) {
+        return 10;
+      }
+
+      return totalPercent;
     },
     getPayments() {
       return calcPayment({
