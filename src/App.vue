@@ -96,11 +96,12 @@
 </template>
 
 <script>
-import VueLoadingIndicator from '@/components/loading-indicator.jsx'
-import Button from '@/components/Button.vue'
-import InputWrapper from '@/components/InputWrapper.vue'
-import { calcPayment } from '@/business/calculatedPayment.js'
-import spacedNum from '@/utils/getSpacedNum.js'
+import { useMainStore } from './store/store.js';
+import VueLoadingIndicator from '@/components/loading-indicator.jsx';
+import Button from '@/components/Button.vue';
+import InputWrapper from '@/components/InputWrapper.vue';
+import { calcPayment } from '@/business/calculatedPayment.js';
+import spacedNum from '@/utils/getSpacedNum.js';
 
 export default {
   components: {
@@ -112,9 +113,9 @@ export default {
     return {
       loading: false,
       formData: {
-        autoAmount: 3300000,
-        deposit: 420000,
-        leaseTerm: 60
+        autoAmount: 0,
+        deposit: 0,
+        leaseTerm: 0
       }
     }
   },
@@ -135,12 +136,15 @@ export default {
     async onSubmitForm() {
       this.loading = true;
 
-      await setTimeout(() => {
-        const jsonData = JSON.stringify(this.formData);
-        alert(jsonData);
+      await setTimeout(async () => {
+        await useMainStore().$patch({...this.formData});
+        await useMainStore().sendFormData();
         this.loading = false;
       }, 400);
     }
+  },
+  created(){
+    Object.assign(this.formData, useMainStore().$state);
   }
 }
 </script>
